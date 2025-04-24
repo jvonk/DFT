@@ -1,0 +1,36 @@
+# Build
+build/
+
+# Output
+student_output/
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+
+# Tex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.pdf
+
+# Python
+__pycache__/
+
+# Pytest 
+.pytest_cache/
+
+# Mac
+.DS_Store

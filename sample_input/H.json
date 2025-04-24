@@ -1,0 +1,9 @@
+{
+    "atoms_file_path" : "atoms/H.xyz",
+    "output_file_path" : "student_output/hw6_1/H.hdf5",
+    "box_size_angstrom" : 5, 
+    "kinetic_energy_cutoff_eV" : 100,
+    "number_grid_points" : 20,
+    "num_alpha_electrons" : 1, 
+    "num_beta_electrons" : 0
+}
