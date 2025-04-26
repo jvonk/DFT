@@ -16,7 +16,7 @@ find_package(HighFive REQUIRED)
 
 # Find Linear Algebra Header Libraries
 find_package(Armadillo REQUIRED)
-find_package(Eigen3 3.4 REQUIRED NO_MODULE)
+# find_package(Eigen3 3.4 REQUIRED NO_MODULE)
 
 # Find Linear Algebra Runtime Libraries
 find_package(BLAS REQUIRED)
@@ -25,7 +25,7 @@ find_package(LAPACK REQUIRED)
 # Includes, Links and Defines 
 include_directories(${ARMADILLO_INCLUDE_DIRS})
 link_libraries(${ARMADILLO_LIBRARIES})
-link_libraries(Eigen3::Eigen) 
+# link_libraries(Eigen3::Eigen) 
 link_libraries(armadillo)
 link_directories(nlohmann_json::nlohmann_json)
 link_libraries(HDF5::HDF5)
