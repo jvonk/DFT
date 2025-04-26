@@ -44,12 +44,12 @@ int main(int argc, char** argv){
     int num_beta_electrons = config["num_beta_electrons"];
     
     std::ifstream atoms_file(atoms_file_path);
+    std::cout << "Atoms file: " << atoms_file_path << std::endl;
     int num_3D_dims = 3; 
     int num_atoms;
-    atoms_file >> num_atoms;
+    atoms_file >> num_atoms >> std::ws;
     std::cout << "Number of atoms: " << num_atoms << std::endl;
     std::string comment;
-    std::getline(atoms_file, comment);
     std::getline(atoms_file, comment);
     std::cout << "Comment: " << comment << std::endl;
     std::vector<Atom> atoms;
@@ -68,6 +68,4 @@ int main(int argc, char** argv){
     Simulation sim(atoms, "CNDO2", num_alpha_electrons, num_beta_electrons);
 
     std::cout << std::fixed << std::setprecision(4) << std::setw(8) << std::right; 
-
-
 }  
