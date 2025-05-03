@@ -25,6 +25,7 @@ int main(int argc, char** argv){
     
     // parse the config file 
     fs::path config_file_path(argv[1]);
+    std::cout << argv[0] << " config file path: " << argv[1] << std::endl;
     if (!fs::exists(config_file_path)){
         std::cerr << "Path: " << config_file_path << " does not exist" << std::endl; 
         return EXIT_FAILURE;
@@ -43,10 +44,9 @@ int main(int argc, char** argv){
     std::ifstream atoms_file(atoms_file_path);
     int num_3D_dims = 3; 
     int num_atoms;
-    atoms_file >> num_atoms;
+    atoms_file >> num_atoms >> std::ws;
     std::cout << "Number of atoms: " << num_atoms << std::endl;
     std::string comment;
-    std::getline(atoms_file, comment);
     std::getline(atoms_file, comment);
     std::cout << "Comment: " << comment << std::endl;
     std::vector<Atom> atoms;
@@ -62,7 +62,7 @@ int main(int argc, char** argv){
         }
         atoms.push_back(atom);
     }
-    Simulation sim(atoms, "CNDO2", num_alpha_electrons, num_beta_electrons);
+    CNDO2 sim(atoms, num_alpha_electrons, num_beta_electrons);
     int num_basis_functions = sim.basis_count();
     
     arma::mat Suv_RA(num_3D_dims, num_basis_functions*num_basis_functions); 
@@ -80,8 +80,8 @@ int main(int argc, char** argv){
     // Set print configs
     std::cout << std::fixed << std::setprecision(4) << std::setw(8) << std::right; 
 
-    double force_threshold = 1e-3;
-    const double tol = 1e-10;
+    double force_threshold = 1e-10;
+    const double tol = 1e-12;
     const double golden_ratio = 1.618304;
     double h = 0.0001;
     double l = 0.01;
@@ -166,17 +166,23 @@ int main(int argc, char** argv){
 
 
     // Extra Credit Portion
-    sim.forces = -gradient;
     int iteration = 1;
     double energy = sim.energy();
     for (; iteration < 1000; iteration++) {
         std::cout << "Iteration: " << iteration << std::endl;
         double old_energy = energy;
-        sim = sim.line_search(std::cout, 0.0, l, golden_ratio, 3.0e-8, h, l);
+        auto f = [&](double step) -> double {
+            CNDO2 copy = sim;
+            copy.move(-gradient, step);
+            copy.converge();
+            return copy.energy();
+        };
+        double step = line_search(std::cout, f, 0.0, l, golden_ratio, 3.0e-8, h, l);
+        sim.move(-gradient, step);
+        sim.converge();
         for (int a = 0; a < num_atoms; a++) {
             gradient.col(a) = sim.nuclear_repulsion_energy_grad(a) + sim.electronic_energy_grad(a);
         }
-        sim.forces = -gradient;
         energy = sim.energy();
         std::cout << "new_point" << std::endl;;
         for (Atom atom : sim.atoms) {
@@ -184,8 +190,8 @@ int main(int argc, char** argv){
         }
         std::cout << "current energy: " << energy << std::endl;
         std::cout << "force:" << std::endl;
-        std::cout << sim.forces;
-        if ((norm2(sim.forces) < force_threshold) || (abs(energy - old_energy) < tol)) {
+        std::cout << -gradient;
+        if ((norm2(gradient) < force_threshold) || (abs(energy - old_energy) < tol)) {
             break;
         }
         if (energy < old_energy) {

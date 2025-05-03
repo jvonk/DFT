@@ -58,14 +58,28 @@ int main(int argc, char** argv){
         double X, Y, Z;
         atoms_file >> E >> X >> Y >> Z;
         arma::vec R = { X, Y, Z };
-        Atom atom = { E, R };
+        Atom atom(E, R, false);
         std::cout << "Atom: " << atom << std::endl;
-        if ((E != 1) && (E != 6) && (E != 7) && (E != 8) && (E != 9)) {
-            throw std::invalid_argument("Element not supported!");
-        }
         atoms.push_back(atom);
     }
-    Simulation sim(atoms, "CNDO2", num_alpha_electrons, num_beta_electrons);
+    DFT sim(atoms, num_alpha_electrons, num_beta_electrons, box_size_angstrom, kinetic_energy_cutoff_eV, number_grid_points, 3, false);
+    sim.converge(1e-10, true);
+    std::cout << std::fixed << std::setprecision(4) << std::setw(8) << std::right;
+    std::cout << sim.energy() << " eV" << std::endl;
 
-    std::cout << std::fixed << std::setprecision(4) << std::setw(8) << std::right; 
+    // check that output dir exists
+    if (!fs::exists(output_file_path.parent_path())){
+        fs::create_directories(output_file_path.parent_path()); 
+    }
+    
+    // delete the file if it does exist (so that no old answers stay there by accident)
+    if (fs::exists(output_file_path)){
+        fs::remove(output_file_path); 
+    }
+    sim.Calpha.save(arma::hdf5_name(output_file_path, "C_alpha", arma::hdf5_opts::append));
+    sim.Cbeta.save(arma::hdf5_name(output_file_path, "C_beta", arma::hdf5_opts::append));
+    sim.grid_points.save(arma::hdf5_name(output_file_path, "grid_points", arma::hdf5_opts::append));
+    sim.grid_wavefunction.save(arma::hdf5_name(output_file_path, "grid_wavefunction", arma::hdf5_opts::append));
+    sim.density(sim.Calpha).save(arma::hdf5_name(output_file_path, "density_alpha", arma::hdf5_opts::append));
+    sim.density(sim.Cbeta).save(arma::hdf5_name(output_file_path, "density_beta", arma::hdf5_opts::append));
 }  
