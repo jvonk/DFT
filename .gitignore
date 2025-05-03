@@ -24,7 +24,6 @@ CMakeUserPresets.json
 *.fls
 *.log
 *.synctex.gz
-*.pdf
 
 # Python
 __pycache__/
