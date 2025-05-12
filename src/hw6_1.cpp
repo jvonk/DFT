@@ -62,8 +62,8 @@ int main(int argc, char** argv){
         std::cout << "Atom: " << atom << std::endl;
         atoms.push_back(atom);
     }
-    DFT sim(atoms, num_alpha_electrons, num_beta_electrons, box_size_angstrom, kinetic_energy_cutoff_eV, number_grid_points, 3, false);
-    sim.converge(1e-10, true);
+    DFT sim(atoms, num_alpha_electrons, num_beta_electrons, box_size_angstrom, kinetic_energy_cutoff_eV, number_grid_points, 3, false, 1e-6);
+    sim.converge(true);
     std::cout << std::fixed << std::setprecision(4) << std::setw(8) << std::right;
     std::cout << sim.energy() << " eV" << std::endl;
 

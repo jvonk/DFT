@@ -9,10 +9,9 @@
     My code is at: \href{https://github.com/Berkeley-Chem-179-279/hw6-jvonk}{\texttt{https://github.com/Berkeley-Chem-179-279/hw6-jvonk}}\\
     \begin{problems}[\textbf{HW6.\arabic*:}]
         \item I implemented my DFT code using both the density fitting and a Poisson solver.
-        Both the density fitting and the Poisson solver gave slightly different results compared to the reference solution.
-        Since the differences were small, it is likely that my Poisson solver uses different convergence criteria than the reference solution.
+        The density fitting gave slightly different results compared to the reference solution, but the Poisson solver matched within \qty{0.000001}{\hartree} for \ce{H} and \ce{H2} using all the terms, which was also the convergence tolerance.
         \item I debugged the code for Hydrogen with only the external potential.
-        Without density fitting, it almost exactly matches the reference solution.
+        With a Poisson solver, it exactly matches the reference solution.
         \item \adjustimage{center, width=0.5\textwidth}{He_wavefunctions.pdf}
         \adjustimage{center, width=0.5\textwidth}{H2_stretch_wavefunctions.pdf}
     \end{problems}

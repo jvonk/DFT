@@ -1163,15 +1163,17 @@ class DFT : public Simulation
     double grid_weight;
     int include;
     bool density_fitting;
+    double tol;
     DFT(const std::vector<Atom> &atoms, const int N_ALPHA, const int N_BETA,
         const double BOX_SIZE_ANGSTROM, const double KINETIC_ENERGY_CUTOFF_EV,
         const int NUMBER_GRID_POINTS, const int INCLUDE = 3,
-        const bool DENSITY_FITTING = true)
+        const bool DENSITY_FITTING = true,
+        const double TOL = std::numeric_limits<double>::epsilon())
         : Simulation(atoms), n_alpha(N_ALPHA), n_beta(N_BETA),
           L(BOX_SIZE_ANGSTROM / 0.529177210544),
           E_cutoff(KINETIC_ENERGY_CUTOFF_EV / 27.211386246),
           N_grid(NUMBER_GRID_POINTS), include(INCLUDE),
-          density_fitting(DENSITY_FITTING)
+          density_fitting(DENSITY_FITTING), tol(TOL)
     {
         grid_weight = pow(L / N_grid, 3);
         double shift = L / 2.0 * (1.0 - 1.0 / N_grid);
@@ -1241,8 +1243,7 @@ class DFT : public Simulation
                   << std::endl;
     }
 
-    void converge(const double tol = std::numeric_limits<double>::epsilon(),
-                  const bool debug = false)
+    void converge(const bool debug = false)
     {
         for (int iteration = 0;; iteration++) {
             arma::mat Fa = fock_matrix(Calpha);
@@ -1264,9 +1265,6 @@ class DFT : public Simulation
 
             if (debug) {
                 std::cout << "Iteration:" << iteration << std::endl;
-                std::cout
-                    << "Poisson solver converged in @@@not used iterations"
-                    << std::endl;
                 std::cout << "The total number of electron is "
                           << n_alpha + n_beta << std::endl;
                 std::cout << "Energy of occupied orbital (alpha) 0: "
@@ -1307,22 +1305,8 @@ class DFT : public Simulation
 
     arma::vec density(const arma::mat &C) const
     {
-        arma::vec rho = arma::zeros(grid_points.n_cols);
-        arma::mat omega2 = grid_wavefunction % grid_wavefunction;
-        for (arma::uword mu = 0; mu < basis.size(); mu++) {
-            double term = 0.0;
-            for (arma::uword i = 0; i < C.n_cols; i++) {
-                term += pow(C(mu, i), 2.0);
-            }
-            rho += term * omega2.col(mu);
-            // Or in one line:
-            // rho += arma::dot(C.row(mu) % C.row(mu), omega2.col(mu));
-        }
-        if (C.n_cols > 0) {
-            arma::vec temp = arma::sum(C % C, 1);
-            arma::vec rho2 = (grid_wavefunction % grid_wavefunction) * temp;
-        }
-        return rho;
+        arma::mat phi = grid_wavefunction * C;
+        return arma::sum(phi % phi, 1);
     }
 
     arma::mat kinetic_matrix() const
@@ -1336,8 +1320,6 @@ class DFT : public Simulation
 
     arma::mat grid_integration(arma::vec &V_r) const
     {
-        // return (grid_wavefunction.each_col() % V_r).t() * grid_wavefunction *
-        //    grid_weight;
         arma::mat V = arma::zeros(basis.size(), basis.size());
         for (arma::uword mu = 0; mu < basis.size(); mu++) {
             for (arma::uword nu = 0; nu < basis.size(); nu++) {
@@ -1383,8 +1365,7 @@ class DFT : public Simulation
         return grid_integration(Vext);
     }
 
-    arma::mat hartree_potential_matrix(
-        const double tol = std::numeric_limits<double>::epsilon()) const
+    arma::mat hartree_potential_matrix() const
     {
         arma::vec VH = arma::zeros(grid_points.n_cols);
         arma::vec rho = density(Calpha) + density(Cbeta);
@@ -1399,13 +1380,6 @@ class DFT : public Simulation
                 VH += omega * CH(mu);
             }
         } else {
-            // arma::cube
-            // grid1(arma::conv_to<arma::vec>::from(grid_points.row(0)).begin(),
-            // N_grid, N_grid, N_grid); arma::cube
-            // grid2(arma::conv_to<arma::vec>::from(grid_points.row(1)).begin(),
-            // N_grid, N_grid, N_grid); arma::cube
-            // grid3(arma::conv_to<arma::vec>::from(grid_points.row(2)).begin(),
-            // N_grid, N_grid, N_grid);
             arma::cube V(VH.begin(), N_grid, N_grid, N_grid);
             arma::cube rho_mat(rho.begin(), N_grid, N_grid, N_grid);
             for (int iteration = 0;; iteration++) {
@@ -1496,15 +1470,6 @@ class DFT : public Simulation
 
     double energy() const override
     {
-        // arma::mat P = density_matrix(Calpha) + density_matrix(Cbeta);
-        // arma::mat T = kinetic_matrix(); arma::mat Vext =
-        // external_potential_matrix(); arma::mat VH =
-        // hartree_potential_matrix(); arma::mat f =
-        // arma::pow(density(Calpha), 4.0 / 3) +
-        //               arma::pow(density(Cbeta), 4.0 / 3);
-        // double Exc =
-        //     -0.75 * pow(3.0 / M_PI, 1.0 / 3) * grid_weight * arma::accu(f);
-        // return arma::trace(P * (T + Vext + VH / 2.0)) + Exc;
         double E = kinetic_energy();
         if (include >= 1) {
             E += external_energy();
