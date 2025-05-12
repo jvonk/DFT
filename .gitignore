@@ -1,9 +1,6 @@
 # Build
 build/
 
-# Output
-student_output/
-
 # CMake
 CMakeLists.txt.user
 CMakeCache.txt

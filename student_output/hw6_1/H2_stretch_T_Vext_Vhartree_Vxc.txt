@@ -1,0 +1,1328 @@
+Atoms file: "/home/jvonk/hw6-jvonk/atoms/H2_stretch.xyz"
+Number of atoms: 2
+Comment: comment line
+Atom: 1(0, 0, 0)
+Atom: 1(1.5, 0, 0)
+Box lattice vectors (Bohr):      9.4486        0        0
+        0   9.4486        0
+        0        0   9.4486
+
+Cutoff energy (eV): 100
+Number of basis functions: 214
+Number of grid points: 20 x 20 x 20
+Number of electrons: 2
+Real space density initialized (zeros)
+Will finish constructing the kinetic energy part of the Hamiltonian later
+Finished evaluating the basis set at each grid point
+Poisson solver converged in 0 iterations
+Poisson solver converged in 0 iterations
+Iteration:0
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -1.14462
+Kinetic energy: 1.12173
+Hartree energy: Poisson solver converged in 2990 iterations
+1.02269
+External energy: -3.41098
+Exchange-correlation energy (alpha): -0.232698
+Energy of occupied orbital (beta) 0: -1.14462
+Exchange-correlation energy (beta): -0.232698
+Exchange-correlation energy (total): -0.465396
+Total energy: Poisson solver converged in 2990 iterations
+-1.73195
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.453668
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0567194
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.110536
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0475633
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.110536
+Basis contribution:        2        1        3
+to orbital (alpha) 0 is 0.0157632
+Basis contribution:        2        3        1
+to orbital (alpha) 0 is 0.0157632
+Basis contribution:        4        1        1
+to orbital (alpha) 0 is 0.0178002
+Basis contribution:        3        1        3
+to orbital (alpha) 0 is 0.015413
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0365317
+Basis contribution:        3        3        1
+to orbital (alpha) 0 is 0.015413
+Basis contribution:        1        5        1
+to orbital (alpha) 0 is 0.0146345
+Basis contribution:        1        1        5
+to orbital (alpha) 0 is 0.0146345
+Poisson solver converged in 2990 iterations
+Poisson solver converged in 2990 iterations
+Iteration:1
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.485598
+Kinetic energy: 0.672375
+Hartree energy: Poisson solver converged in 2954 iterations
+0.694338
+External energy: -2.81359
+Exchange-correlation energy (alpha): -0.177916
+Energy of occupied orbital (beta) 0: -0.485598
+Exchange-correlation energy (beta): -0.177916
+Exchange-correlation energy (total): -0.355832
+Total energy: Poisson solver converged in 2954 iterations
+-1.80271
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.712995
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0560613
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0649385
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0193696
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0649385
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0158241
+Poisson solver converged in 2954 iterations
+Poisson solver converged in 2954 iterations
+Iteration:2
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.620462
+Kinetic energy: 0.813778
+Hartree energy: Poisson solver converged in 2996 iterations
+0.808682
+External energy: -3.03988
+Exchange-correlation energy (alpha): -0.197024
+Energy of occupied orbital (beta) 0: -0.620462
+Exchange-correlation energy (beta): -0.197024
+Exchange-correlation energy (total): -0.394048
+Total energy: Poisson solver converged in 2996 iterations
+-1.81147
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.623443
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0597419
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.082321
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0288857
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.082321
+Basis contribution:        2        1        3
+to orbital (alpha) 0 is 0.0107793
+Basis contribution:        2        3        1
+to orbital (alpha) 0 is 0.0107793
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0222338
+Poisson solver converged in 2996 iterations
+Poisson solver converged in 2996 iterations
+Iteration:3
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.567998
+Kinetic energy: 0.759064
+Hartree energy: Poisson solver converged in 2995 iterations
+0.765954
+External energy: -2.9579
+Exchange-correlation energy (alpha): -0.189878
+Energy of occupied orbital (beta) 0: -0.567998
+Exchange-correlation energy (beta): -0.189878
+Exchange-correlation energy (total): -0.379757
+Total energy: Poisson solver converged in 2995 iterations
+-1.81264
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.657316
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0581607
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.076117
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0255629
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.076117
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0197605
+Poisson solver converged in 2995 iterations
+Poisson solver converged in 2995 iterations
+Iteration:4
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.586766
+Kinetic energy: 0.779015
+Hartree energy: Poisson solver converged in 2964 iterations
+0.781682
+External energy: -2.98847
+Exchange-correlation energy (alpha): -0.192517
+Energy of occupied orbital (beta) 0: -0.586766
+Exchange-correlation energy (beta): -0.192517
+Exchange-correlation energy (total): -0.385033
+Total energy: Poisson solver converged in 2964 iterations
+-1.8128
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.644593
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0591383
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.078408
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0266603
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.078408
+Basis contribution:        2        1        3
+to orbital (alpha) 0 is 0.0101051
+Basis contribution:        2        3        1
+to orbital (alpha) 0 is 0.0101051
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0206535
+Poisson solver converged in 2964 iterations
+Poisson solver converged in 2964 iterations
+Iteration:5
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.579751
+Kinetic energy: 0.77153
+Hartree energy: Poisson solver converged in 2977 iterations
+0.775838
+External energy: -2.97713
+Exchange-correlation energy (alpha): -0.191532
+Energy of occupied orbital (beta) 0: -0.579751
+Exchange-correlation energy (beta): -0.191532
+Exchange-correlation energy (total): -0.383064
+Total energy: Poisson solver converged in 2977 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.649476
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0585633
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0775801
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0263378
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0775801
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0203246
+Poisson solver converged in 2977 iterations
+Poisson solver converged in 2977 iterations
+Iteration:6
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.58234
+Kinetic energy: 0.774336
+Hartree energy: Poisson solver converged in 2967 iterations
+0.778014
+External energy: -2.98138
+Exchange-correlation energy (alpha): -0.191901
+Energy of occupied orbital (beta) 0: -0.58234
+Exchange-correlation energy (beta): -0.191901
+Exchange-correlation energy (total): -0.383803
+Total energy: Poisson solver converged in 2967 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.647559
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0589165
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0778774
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264054
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0778774
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204441
+Poisson solver converged in 2967 iterations
+Poisson solver converged in 2967 iterations
+Iteration:7
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581375
+Kinetic energy: 0.773267
+Hartree energy: Poisson solver converged in 2960 iterations
+0.777197
+External energy: -2.97977
+Exchange-correlation energy (alpha): -0.191761
+Energy of occupied orbital (beta) 0: -0.581375
+Exchange-correlation energy (beta): -0.191761
+Exchange-correlation energy (total): -0.383522
+Total energy: Poisson solver converged in 2960 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.64834
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0586976
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777731
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264131
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777731
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204009
+Poisson solver converged in 2960 iterations
+Poisson solver converged in 2960 iterations
+Iteration:8
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581737
+Kinetic energy: 0.773682
+Hartree energy: Poisson solver converged in 2977 iterations
+0.777507
+External energy: -2.98039
+Exchange-correlation energy (alpha): -0.191815
+Energy of occupied orbital (beta) 0: -0.581737
+Exchange-correlation energy (beta): -0.191815
+Exchange-correlation energy (total): -0.383631
+Total energy: Poisson solver converged in 2977 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648005
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0588346
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0778082
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0263896
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0778082
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204163
+Poisson solver converged in 2977 iterations
+Poisson solver converged in 2977 iterations
+Iteration:9
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.5816
+Kinetic energy: 0.773515
+Hartree energy: Poisson solver converged in 2984 iterations
+0.777387
+External energy: -2.98014
+Exchange-correlation energy (alpha): -0.191794
+Energy of occupied orbital (beta) 0: -0.5816
+Exchange-correlation energy (beta): -0.191794
+Exchange-correlation energy (total): -0.383587
+Total energy: Poisson solver converged in 2984 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648159
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587485
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777974
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264114
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777974
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.020411
+Poisson solver converged in 2984 iterations
+Poisson solver converged in 2984 iterations
+Iteration:10
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581652
+Kinetic energy: 0.773585
+Hartree energy: Poisson solver converged in 2970 iterations
+0.777435
+External energy: -2.98024
+Exchange-correlation energy (alpha): -0.191803
+Energy of occupied orbital (beta) 0: -0.581652
+Exchange-correlation energy (beta): -0.191803
+Exchange-correlation energy (total): -0.383606
+Total energy: Poisson solver converged in 2970 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648083
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0588028
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0778001
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0263951
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0778001
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204127
+Poisson solver converged in 2970 iterations
+Poisson solver converged in 2970 iterations
+Iteration:11
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581631
+Kinetic energy: 0.773554
+Hartree energy: Poisson solver converged in 2978 iterations
+0.777415
+External energy: -2.9802
+Exchange-correlation energy (alpha): -0.191799
+Energy of occupied orbital (beta) 0: -0.581631
+Exchange-correlation energy (beta): -0.191799
+Exchange-correlation energy (total): -0.383598
+Total energy: Poisson solver converged in 2978 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648123
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587685
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777999
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264063
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777999
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204122
+Poisson solver converged in 2978 iterations
+Poisson solver converged in 2978 iterations
+Iteration:12
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.58164
+Kinetic energy: 0.773569
+Hartree energy: Poisson solver converged in 3000 iterations
+0.777424
+External energy: -2.98022
+Exchange-correlation energy (alpha): -0.191801
+Energy of occupied orbital (beta) 0: -0.58164
+Exchange-correlation energy (beta): -0.191801
+Exchange-correlation energy (total): -0.383601
+Total energy: Poisson solver converged in 3000 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.6481
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587902
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777995
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0263988
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777995
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 3000 iterations
+Poisson solver converged in 3000 iterations
+Iteration:13
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581636
+Kinetic energy: 0.773561
+Hartree energy: Poisson solver converged in 3002 iterations
+0.77742
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581636
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.383599
+Total energy: Poisson solver converged in 3002 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648114
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587764
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0778
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264037
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0778
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 3002 iterations
+Poisson solver converged in 3002 iterations
+Iteration:14
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581638
+Kinetic energy: 0.773566
+Hartree energy: Poisson solver converged in 2999 iterations
+0.777422
+External energy: -2.98022
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581638
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2999 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648106
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587851
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777996
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264006
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777996
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2999 iterations
+Poisson solver converged in 2999 iterations
+Iteration:15
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773563
+Hartree energy: Poisson solver converged in 3001 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 3001 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.64811
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587796
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777999
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264026
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777999
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 3001 iterations
+Poisson solver converged in 3001 iterations
+Iteration:16
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581638
+Kinetic energy: 0.773565
+Hartree energy: Poisson solver converged in 2955 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581638
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2955 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648107
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587831
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264013
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2955 iterations
+Poisson solver converged in 2955 iterations
+Iteration:17
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2968 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2968 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587809
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777998
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264021
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777998
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2968 iterations
+Poisson solver converged in 2968 iterations
+Iteration:18
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581638
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2985 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581638
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2985 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648108
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587823
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264016
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2985 iterations
+Poisson solver converged in 2985 iterations
+Iteration:19
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2996 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2996 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587814
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777998
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264019
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777998
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2996 iterations
+Poisson solver converged in 2996 iterations
+Iteration:20
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 3002 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 3002 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648108
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.058782
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264017
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 3002 iterations
+Poisson solver converged in 3002 iterations
+Iteration:21
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2952 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2952 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587816
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2952 iterations
+Poisson solver converged in 2952 iterations
+Iteration:22
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2988 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2988 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2988 iterations
+Poisson solver converged in 2988 iterations
+Iteration:23
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2943 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2943 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587817
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2943 iterations
+Poisson solver converged in 2943 iterations
+Iteration:24
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2957 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2957 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2957 iterations
+Poisson solver converged in 2957 iterations
+Iteration:25
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2974 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2974 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587817
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2974 iterations
+Poisson solver converged in 2974 iterations
+Iteration:26
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2958 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2958 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2958 iterations
+Poisson solver converged in 2958 iterations
+Iteration:27
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2958 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2958 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587817
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2958 iterations
+Poisson solver converged in 2958 iterations
+Iteration:28
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2951 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2951 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2951 iterations
+Poisson solver converged in 2951 iterations
+Iteration:29
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2982 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2982 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2982 iterations
+Poisson solver converged in 2982 iterations
+Iteration:30
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2959 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2959 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2959 iterations
+Poisson solver converged in 2959 iterations
+Iteration:31
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2937 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2937 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2937 iterations
+Poisson solver converged in 2937 iterations
+Iteration:32
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2984 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2984 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2984 iterations
+Poisson solver converged in 2984 iterations
+Iteration:33
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2993 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2993 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2993 iterations
+Poisson solver converged in 2993 iterations
+Iteration:34
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2978 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2978 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2978 iterations
+Poisson solver converged in 2978 iterations
+Iteration:35
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2963 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2963 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2963 iterations
+Poisson solver converged in 2963 iterations
+Iteration:36
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2951 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2951 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2951 iterations
+Poisson solver converged in 2951 iterations
+Iteration:37
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2958 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2958 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2958 iterations
+Poisson solver converged in 2958 iterations
+Iteration:38
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2939 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2939 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2939 iterations
+Poisson solver converged in 2939 iterations
+Iteration:39
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2958 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2958 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2958 iterations
+Poisson solver converged in 2958 iterations
+Iteration:40
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2998 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2998 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2998 iterations
+Poisson solver converged in 2998 iterations
+Iteration:41
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2993 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2993 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2993 iterations
+Poisson solver converged in 2993 iterations
+Iteration:42
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2964 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2964 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2964 iterations
+Poisson solver converged in 2964 iterations
+Iteration:43
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2992 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2992 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2992 iterations
+Poisson solver converged in 2992 iterations
+Iteration:44
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 2956 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 2956 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 2956 iterations
+Poisson solver converged in 2956 iterations
+Iteration:45
+Poisson solver converged in @@@not used iterations
+The total number of electron is 2
+Energy of occupied orbital (alpha) 0: -0.581637
+Kinetic energy: 0.773564
+Hartree energy: Poisson solver converged in 3009 iterations
+0.777421
+External energy: -2.98021
+Exchange-correlation energy (alpha): -0.1918
+Energy of occupied orbital (beta) 0: -0.581637
+Exchange-correlation energy (beta): -0.1918
+Exchange-correlation energy (total): -0.3836
+Total energy: Poisson solver converged in 3009 iterations
+-1.81283
+Basis contribution:        1        1        1
+to orbital (alpha) 0 is 0.648109
+Basis contribution:        2        1        1
+to orbital (alpha) 0 is 0.0587818
+Basis contribution:        1        1        3
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        3        1        1
+to orbital (alpha) 0 is 0.0264018
+Basis contribution:        1        3        1
+to orbital (alpha) 0 is 0.0777997
+Basis contribution:        1        3        3
+to orbital (alpha) 0 is 0.0204123
+Poisson solver converged in 3009 iterations
+-1.8128 eV
