@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.31)
 
-project (hw6)
+project (dft)
 
 # Compiler requirements
 set(CMAKE_CXX_STANDARD 20) 

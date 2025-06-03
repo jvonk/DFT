@@ -5,5 +5,8 @@
     "kinetic_energy_cutoff_eV" : 100,
     "number_grid_points" : 20,
     "num_alpha_electrons" : 1, 
-    "num_beta_electrons" : 0
+    "num_beta_electrons" : 0,
+    "included_terms": 3,
+    "density_fitting": false,
+    "tolerance": 1e-6
 }
