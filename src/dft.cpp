@@ -44,6 +44,8 @@ int main(int argc, char** argv){
     arma::uword N_ALPHA = config["num_alpha_electrons"];
     arma::uword N_BETA = config["num_beta_electrons"];
 
+    int FUNCTIONAL = config["functional"];
+
     // int INCLUDE = config["included_terms"];
     int INCLUDE = 3;
     // bool DENSITY_FITTING = config["density_fitting"];
@@ -70,8 +72,8 @@ int main(int argc, char** argv){
         std::cout << "Atom: " << atom << std::endl;
         atoms.push_back(atom);
     }
-    DFT sim(atoms, N_ALPHA, N_BETA, BOX_SIZE_ANGSTROM, KINETIC_ENERGY_CUTOFF_EV, NUMBER_GRID_POINTS, INCLUDE, DENSITY_FITTING, TOL);
-    sim.converge(true);
+    DFT sim(atoms, N_ALPHA, N_BETA, BOX_SIZE_ANGSTROM, KINETIC_ENERGY_CUTOFF_EV, NUMBER_GRID_POINTS, INCLUDE, DENSITY_FITTING, TOL, FUNCTIONAL);
+    sim.scf(true);
     std::cout << std::fixed << std::setprecision(4) << std::setw(8) << std::right;
     std::cout << sim.energy() << " eV" << std::endl;
 
@@ -84,10 +86,10 @@ int main(int argc, char** argv){
     if (fs::exists(output_file_path)){
         fs::remove(output_file_path); 
     }
-    sim.Calpha.save(arma::hdf5_name(output_file_path, "C_alpha", arma::hdf5_opts::append));
-    sim.Cbeta.save(arma::hdf5_name(output_file_path, "C_beta", arma::hdf5_opts::append));
+    sim.Ca.save(arma::hdf5_name(output_file_path, "C_alpha", arma::hdf5_opts::append));
+    sim.Cb.save(arma::hdf5_name(output_file_path, "C_beta", arma::hdf5_opts::append));
     sim.grid_points.save(arma::hdf5_name(output_file_path, "grid_points", arma::hdf5_opts::append));
     sim.grid_wavefunction.save(arma::hdf5_name(output_file_path, "grid_wavefunction", arma::hdf5_opts::append));
-    sim.density(sim.Calpha).save(arma::hdf5_name(output_file_path, "density_alpha", arma::hdf5_opts::append));
-    sim.density(sim.Cbeta).save(arma::hdf5_name(output_file_path, "density_beta", arma::hdf5_opts::append));
+    sim.density(sim.Ca).save(arma::hdf5_name(output_file_path, "density_alpha", arma::hdf5_opts::append));
+    sim.density(sim.Cb).save(arma::hdf5_name(output_file_path, "density_beta", arma::hdf5_opts::append));
 }  

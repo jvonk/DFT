@@ -6,6 +6,7 @@ project (dft)
 set(CMAKE_CXX_STANDARD 20) 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_TYPE Debug)
+list(APPEND CMAKE_PREFIX_PATH "/opt/slate")
 
 # Find JSON Libraries
 find_package(nlohmann_json REQUIRED)
@@ -22,13 +23,23 @@ find_package(Armadillo REQUIRED)
 find_package(BLAS REQUIRED)
 find_package(LAPACK REQUIRED)
 
+# Find LibXC Libraries
+find_package(Libxc REQUIRED)
+
+# Find GNU Scientific Libraries
+find_package(GSL REQUIRED)
+
+# Find BLAS++ and LAPACK++ Libraries
+find_package(blaspp REQUIRED)
+find_package(lapackpp REQUIRED)
+
 # Includes, Links and Defines 
-include_directories(${ARMADILLO_INCLUDE_DIRS})
-link_libraries(${ARMADILLO_LIBRARIES})
-# link_libraries(Eigen3::Eigen) 
 link_libraries(armadillo)
 link_directories(nlohmann_json::nlohmann_json)
 link_libraries(HDF5::HDF5)
+link_libraries(Libxc::xc)
+link_libraries(GSL::gsl GSL::gslcblas)
+link_libraries(blaspp lapackpp)
 add_compile_definitions(ARMA_USE_HDF5)
 
 # add subdir 

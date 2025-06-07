@@ -4,6 +4,9 @@
 #include <cmath>
 #include <iomanip>
 #include <iostream>
+extern "C" {
+    #include <xc.h>
+}
 
 #include "simulation.hpp"
 #include "tools.hpp"
@@ -37,14 +40,13 @@ class PB
 class DFT : public Simulation
 {
 public:
-    arma::uword n_alpha;
-    arma::uword n_beta;
+    arma::uword na, nb;
     double L;
     double E_cutoff;
     arma::uword N_grid;
     arma::mat grid_points;
-    arma::mat Calpha;
-    arma::mat Cbeta;
+    arma::mat Ca, Cb;
+    arma::mat Pa, Pb;
     double N;
     std::vector<PB> basis;
     std::vector<PB> auxilliary_basis;
@@ -54,21 +56,24 @@ public:
     int include;
     bool density_fitting;
     double tol;
+    bool functional;
+    xc_func_type func;
 
-    // Cached data
-    
-
-    DFT(const std::vector<Atom> &atoms, const arma::uword N_ALPHA, const arma::uword N_BETA,
+    DFT(const std::vector<Atom> &atoms, const arma::uword NA, const arma::uword NB,
         const double BOX_SIZE_ANGSTROM, const double KINETIC_ENERGY_CUTOFF_EV,
         const arma::uword NUMBER_GRID_POINTS, const int INCLUDE = 3,
         const bool DENSITY_FITTING = true,
-        const double TOL = std::numeric_limits<double>::epsilon())
-        : Simulation(atoms), n_alpha(N_ALPHA), n_beta(N_BETA),
+        const double TOL = std::numeric_limits<double>::epsilon(),
+        const int FUNCTIONAL = true)
+        : Simulation(atoms), na(NA), nb(NB),
           L(BOX_SIZE_ANGSTROM / 0.529177210544),
           E_cutoff(KINETIC_ENERGY_CUTOFF_EV / 27.211386246),
           N_grid(NUMBER_GRID_POINTS), include(INCLUDE),
-          density_fitting(DENSITY_FITTING), tol(TOL)
+          density_fitting(DENSITY_FITTING), tol(TOL), functional(FUNCTIONAL)
     {
+        if (xc_func_init(&func, functional, XC_UNPOLARIZED) != 0) {
+            throw std::invalid_argument("Functional not found");
+        }
         grid_weight = pow(L / N_grid, 3);
         double shift = L / 2.0 * (1.0 - 1.0 / N_grid);
         arma::rowvec grid_points_1d =
@@ -93,8 +98,7 @@ public:
             for (arma::uword j = 1; j <= N_aux; j++) {
                 for (arma::uword k = 1; k <= N_aux; k++) {
                     if ((i * i + j * j + k * k) <= N_aux * N_aux) {
-                        auxilliary_basis.push_back(
-                            PB(arma::uvec({i, j, k}), L));
+                        auxilliary_basis.push_back(PB(arma::uvec({i, j, k}), L));
                         if ((i * i + j * j + k * k) <= N * N &&
                             (!odd_only ||
                              (i % 2 == 1 && j % 2 == 1 && k % 2 == 1))) {
@@ -108,8 +112,11 @@ public:
         std::sort(basis.begin(), basis.end());
         std::sort(auxilliary_basis.begin(), auxilliary_basis.end());
 
-        Calpha = arma::zeros(basis.size(), n_alpha);
-        Cbeta = arma::zeros(basis.size(), n_beta);
+        Ca = arma::zeros(basis.size(), na);
+        Cb = arma::zeros(basis.size(), nb);
+
+        Pa = arma::zeros(basis.size(), basis.size());
+        Pb = arma::zeros(basis.size(), basis.size());
 
         grid_wavefunction = arma::zeros(grid_points.n_cols, basis.size());
         for (arma::uword mu = 0; mu < basis.size(); mu++) {
@@ -128,7 +135,7 @@ public:
         std::cout << "Number of basis functions: " << basis.size() << std::endl;
         std::cout << "Number of grid points: " << N_grid << " x " << N_grid
                   << " x " << N_grid << std::endl;
-        std::cout << "Number of electrons: " << n_alpha + n_beta << std::endl;
+        std::cout << "Number of electrons: " << na + nb << std::endl;
         std::cout << "Real space density initialized (zeros)" << std::endl;
         std::cout << "Will finish constructing the kinetic energy part of the "
                      "Hamiltonian later"
@@ -137,67 +144,36 @@ public:
                   << std::endl;
     }
 
-    void converge(const bool debug = false)
+    void scf(const bool debug = false)
     {
         for (int iteration = 0;; iteration++) {
-            arma::mat Fa = fock_matrix(Calpha);
-            arma::mat Fb = fock_matrix(Cbeta);
-            arma::sp_mat Fa_sparse = arma::sp_mat(Fa);
-            arma::sp_mat Fb_sparse = arma::sp_mat(Fb);
-            arma::vec epsilona;
-            arma::mat Ca;
-            // arma::eig_sym(epsilona, Ca, Fa);
-            arma::eigs_sym(epsilona, Ca, Fa_sparse, n_alpha, "sa");
-            // Ca = Ca.head_cols(n_alpha);
-            arma::vec epsilonb;
-            arma::mat Cb;
-            // arma::eig_sym(epsilonb, Cb, Fb);
-            arma::eigs_sym(epsilonb, Cb, Fb_sparse, n_beta, "sa");
-            // Cb = Cb.head_cols(n_beta);
-            arma::mat Pa_new = density_matrix(Ca);
-            arma::mat Pb_new = density_matrix(Cb);
-            arma::mat Pa = density_matrix(Calpha);
-            arma::mat Pb = density_matrix(Cbeta);
-            Calpha = Ca;
-            Cbeta = Cb;
+            bool converged = true;
 
-            if (debug) {
-                std::cout << "Iteration:" << iteration << std::endl;
-                std::cout << "The total number of electron is "
-                          << n_alpha + n_beta << std::endl;
-                if (n_alpha > 0) {
-                    std::cout << "Energy of occupied orbital (alpha) 0: "
-                            << epsilona(0) << std::endl;
-                }
-                std::cout << "Kinetic energy: " << kinetic_energy()
-                          << std::endl;
-                std::cout << "Hartree energy: " << hartree_energy()
-                          << std::endl;
-                std::cout << "External energy: " << external_energy()
-                          << std::endl;
-                std::cout << "Exchange-correlation energy (alpha): "
-                          << exchange_correlation_energy(Calpha) << std::endl;
-                if (n_beta > 0) {
-                    std::cout << "Energy of occupied orbital (beta) 0: "
-                              << epsilonb(0) << std::endl;
-                }
-                std::cout << "Exchange-correlation energy (beta): "
-                          << exchange_correlation_energy(Cbeta) << std::endl;
-                std::cout << "Exchange-correlation energy (total): "
-                          << exchange_correlation_energy(Calpha) +
-                                 exchange_correlation_energy(Cbeta)
-                          << std::endl;
-                std::cout << "Total energy: " << energy() << std::endl;
-                for (arma::uword mu = 0; mu < basis.size(); mu++) {
-                    double contribution = pow(Calpha(mu, 0), 2);
-                    if (contribution >= 0.01) {
-                        std::cout << "Basis contribution:" << basis[mu].n.t();
-                        std::cout << "to orbital (alpha) 0 is " << contribution
-                                  << std::endl;
-                    }
-                }
+            if (na > 0) {
+                arma::mat Fa = fock_matrix(Ca);
+                arma::sp_mat Fa_sparse = arma::sp_mat(Fa);
+                arma::vec epsilona;
+                arma::mat Ca_new;
+                arma::eigs_sym(epsilona, Ca_new, Fa_sparse, na, "sa");
+                Ca = Ca_new;
+                arma::mat Pa_old = Pa;
+                Pa = density_matrix(Ca);
+                converged &= arma::norm(Pa - Pa_old, "inf") < tol;
             }
-            if ((n_alpha == 0 || arma::norm(Pa_new - Pa, "inf") < tol) && (n_beta == 0 || arma::norm(Pb_new - Pb, "inf") < tol)) {
+
+            if (nb > 0) {
+                arma::mat Fb = fock_matrix(Cb);
+                arma::sp_mat Fb_sparse = arma::sp_mat(Fb);
+                arma::vec epsilonb;
+                arma::mat Cb_new;
+                arma::eigs_sym(epsilonb, Cb_new, Fb_sparse, nb, "sa");
+                Cb = Cb_new;
+                arma::mat Pb_old = Pb;
+                Pb = density_matrix(Cb);
+                converged &= arma::norm(Pb - Pb_old, "inf") < tol;
+            }
+
+            if (converged) {
                 break;
             }
         }
@@ -234,11 +210,11 @@ public:
     arma::vec total_density() const
     {
         arma::vec rho = arma::zeros(grid_points.n_cols);
-        if (n_alpha > 0) {
-            rho += density(Calpha);
+        if (na > 0) {
+            rho += density(Ca);
         }
-        if (n_beta > 0) {
-            rho += density(Cbeta);
+        if (nb > 0) {
+            rho += density(Cb);
         }
         return rho;
     }
@@ -331,7 +307,13 @@ public:
         if (C.n_cols == 0) {
             return arma::zeros(basis.size(), basis.size());
         }
-        arma::vec Vxc = -arma::pow((3.0 / M_PI) * density(C), 1.0 / 3);
+        arma::vec Vxc = arma::zeros(grid_points.n_cols);
+        arma::vec rho = density(C);
+        if (functional > 0) {
+            xc_lda_vxc(&func, grid_points.n_cols, rho.memptr(), Vxc.memptr());
+        } else {
+            Vxc = -arma::pow((3.0 / M_PI) * rho, 1.0 / 3);
+        }
         return grid_integration(Vxc);
     }
 
@@ -359,11 +341,11 @@ public:
     arma::mat total_density_matrix() const
     {
         arma::mat P = arma::zeros(basis.size(), basis.size());
-        if (Calpha.n_cols > 0) {
-            P += density_matrix(Calpha);
+        if (Ca.n_cols > 0) {
+            P += density_matrix(Ca);
         }
-        if (Cbeta.n_cols > 0) {
-            P += density_matrix(Cbeta);
+        if (Cb.n_cols > 0) {
+            P += density_matrix(Cb);
         }
         return P;
     }
@@ -394,8 +376,15 @@ public:
         if (C.n_cols == 0) {
             return 0.0;
         }
-        arma::mat f = arma::pow(density(C), 4.0 / 3);
-        return -0.75 * pow(3.0 / M_PI, 1.0 / 3) * grid_weight * arma::accu(f);
+        arma::vec Exc = arma::zeros(grid_points.n_cols);
+        arma::vec rho = density(C);
+        if (functional > 0) {
+            xc_lda_exc(&func, grid_points.n_cols, rho.memptr(), Exc.memptr());
+            Exc %= rho;
+        } else {
+            Exc = -0.75 * pow(3.0 / M_PI, 1.0 / 3) * arma::pow(rho, 4.0 / 3);
+        }
+        return grid_weight * arma::accu(Exc);
     }
 
     double energy() const override
@@ -408,8 +397,8 @@ public:
             E += hartree_energy();
         }
         if (include >= 3) {
-            E += exchange_correlation_energy(Calpha) +
-                 exchange_correlation_energy(Cbeta);
+            E += exchange_correlation_energy(Ca) +
+                 exchange_correlation_energy(Cb);
         }
         return E;
     }

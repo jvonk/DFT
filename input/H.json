@@ -1,6 +1,6 @@
 {
-    "atoms_file_path" : "../atoms/H.xyz",
-    "output_file_path" : "../output/H.hdf5",
+    "atoms_file_path" : "/home/jvonk/Documents/DFT/atoms/H.xyz",
+    "output_file_path" : "/home/jvonk/Documents/DFT/output/H.hdf5",
     "box_size_angstrom" : 5, 
     "kinetic_energy_cutoff_eV" : 100,
     "number_grid_points" : 20,
@@ -8,5 +8,6 @@
     "num_beta_electrons" : 0,
     "included_terms": 3,
     "density_fitting": false,
-    "tolerance": 1e-6
+    "tolerance": 1e-6,
+    "functional": 1
 }
